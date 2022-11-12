@@ -1,0 +1,165 @@
+#VRML_SIM R2022b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/solids/protos/SolidPipe.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/lights/protos/CeilingSpotLight.proto"
+
+WorldInfo {
+  FPS 30
+}
+Viewpoint {
+  orientation -0.5763729626220208 0.5742156207964442 0.5814384135845075 2.0915346182142365
+  position 25.876801620430555 13.751952346875006 78.38391060167164
+  follow "e-puck"
+  followType "None"
+}
+TexturedBackground {
+  texture "dawn_cloudy_empty"
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+RectangleArena {
+  translation 25 15 0
+  floorSize 50 30
+  floorTileSize 2 2
+  floorAppearance Parquetry {
+  }
+}
+E-puck {
+  translation 0.2 0.2 -6.39576e-05
+  rotation -0.0003249683366487018 -0.00010564160016357464 -0.9999999416177144 2.5129805198531767
+  controller "bug0"
+  camera_fieldOfView 0.9
+  camera_width 100
+  camera_height 50
+  turretSlot [
+    PointLight {
+      attenuation 0 0 1
+      color 1 0 0
+      intensity 17
+      location 0 0.3 0
+      radius 10
+    }
+    DEF mid_gps GPS {
+      name "mid_gps"
+    }
+    DEF front_gps GPS {
+      translation 0.04 0 0
+      name "front_gps"
+    }
+  ]
+}
+E-puck {
+  translation 20 6 -6.23391e-05
+  rotation 0.00010184905858622931 0.24505138669769794 -0.969510086334487 0.005973648605620966
+  name "Purple Bot 2"
+  controller "purplebot"
+  turretSlot [
+    PointLight {
+      attenuation 0 0 1
+      color 0.63 0.12 0.94
+      intensity 17
+      location 0 0.3 0
+      radius 10
+    }
+    DEF mid_gps GPS {
+      name "mid_gps"
+    }
+    DEF front_gps GPS {
+      translation 0.04 0 0
+      name "front_gps"
+    }
+  ]
+}
+E-puck {
+  translation 35 6 -6.39569e-05
+  rotation 0.00038588805780188126 -0.00027929776946122924 0.999999886541575 1.8885753304321393
+  name "Purple Bot 1"
+  controller "purplebot1"
+  turretSlot [
+    PointLight {
+      attenuation 0 0 1
+      color 0.63 0.12 0.94
+      intensity 17
+      location 0 0.3 0
+      radius 10
+    }
+    DEF mid_gps GPS {
+      name "mid_gps"
+    }
+    DEF front_gps GPS {
+      translation 0.04 0 0
+      name "front_gps"
+    }
+  ]
+}
+SolidPipe {
+  translation 9 9 0
+  radius 2
+  thickness 1.9
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/default/worlds/textures/tagged_wall.jpg"
+      ]
+    }
+    roughness 0.5
+    emissiveColor 1 0 0
+  }
+}
+SolidPipe {
+  translation 19 21 0
+  name "pipe(1)"
+  radius 2
+  thickness 1.9
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/default/worlds/textures/tagged_wall.jpg"
+      ]
+    }
+    roughness 0.5
+    emissiveColor 1 0 0
+  }
+}
+SolidPipe {
+  translation 37.5 21 0
+  name "pipe(2)"
+  radius 2
+  thickness 1.9
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/default/worlds/textures/tagged_wall.jpg"
+      ]
+    }
+    roughness 0.5
+    emissiveColor 1 0 0
+  }
+}
+SolidPipe {
+  translation 27.5 9 0
+  name "pipe(3)"
+  radius 2
+  thickness 1.9
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/default/worlds/textures/tagged_wall.jpg"
+      ]
+    }
+    roughness 0.5
+    emissiveColor 1 0 0
+  }
+}
+CeilingSpotLight {
+  translation 48 28 5
+  spotLightColor 0 1 0
+  spotLightIntensity 50
+  spotLightRadius 108
+}
