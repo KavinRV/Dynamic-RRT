@@ -208,7 +208,7 @@ data = [[x[0]/20, x[1]/20] for x in data]
 print(data)
 
 # write file
-with open('new_path.pkl', 'wb') as f:
+with open('dynamic_rrt_webots/controllers/path_following/new_path.pkl', 'wb') as f:
     pickle.dump(data, f)
 
 # record canvas as a gif
